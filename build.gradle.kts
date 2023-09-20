@@ -4,6 +4,8 @@ val logbackVersion: String by project
 
 val exposedVersion: String by project
 val h2Version: String by project
+val koinVersion:String by project
+
 plugins {
     kotlin("jvm") version "1.9.10"
     id("io.ktor.plugin") version "2.3.4"
@@ -43,11 +45,13 @@ dependencies {
     //endregion
 
     //region Dependency injection(kodein)
-    implementation("org.kodein.di:kodein-di-jvm:7.17.0")
+    implementation("io.insert-koin:koin-ktor:$koinVersion")
     //endregion
 
     //region Logger dependency
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
+    implementation("io.ktor:ktor-server-call-logging:$ktorVersion")
+
     //endregion
 
     //region Testing dependency

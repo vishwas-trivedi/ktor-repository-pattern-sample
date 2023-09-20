@@ -1,6 +1,7 @@
 package com.example.repositories
 
 import com.example.data.dto.Book
+import com.example.data.entities.BookEntity
 
 interface ICrudRepository {
     /**
@@ -16,7 +17,7 @@ interface ICrudRepository {
     /**
      *
      */
-    suspend fun create(bookEntity: Book):Boolean
+    suspend fun create(bookEntity: Book): BookEntity
 
     /**
      *

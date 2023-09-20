@@ -1,15 +1,22 @@
 package com.example
 
-import com.example.config.*
-import com.example.config.routes.configureRouting
+import com.example.config.configureDatabases
+import com.example.config.configureKoinDI
+import com.example.config.configureRouting
+import com.example.config.configureSerialization
 import io.ktor.server.application.*
+import io.ktor.server.netty.*
 
 fun main(args: Array<String>) {
-    io.ktor.server.netty.EngineMain.main(args)
+    EngineMain.main(args)
 }
 
+/**
+ * Registration for all the modules required
+ */
 fun Application.module() {
     configureSerialization()
     configureDatabases()
     configureRouting()
+    configureKoinDI()
 }

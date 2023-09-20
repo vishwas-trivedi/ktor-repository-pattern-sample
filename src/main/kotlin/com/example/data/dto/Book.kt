@@ -1,17 +1,16 @@
 package com.example.data.dto
 
-import com.example.data.entities.BookEntity
 import kotlinx.serialization.Serializable
 
 /**
- *  Data model representing books
+ *  Data model representing booksDto
  */
 @Serializable
 data class Book(
     /**
      * Unique ID of the book
      */
-    val id: Int,
+    val id: Int? = null,
 
     /**
      * Title of name of the book
