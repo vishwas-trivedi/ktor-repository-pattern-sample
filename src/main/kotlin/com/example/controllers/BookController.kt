@@ -28,7 +28,8 @@ fun Route.booksController() {
          * Create new Book
          */
         post {
-            val objBook = call.receive<Book>()
+            val objBook = call.receive<Book>().validate()
+//            val objBook = call.receive<Book>()
             val result = service.addBook(objBook)
             call.respond(result)
         }

@@ -8,12 +8,6 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 import org.koin.ktor.plugin.Koin
 
-//fun Application.configureDI() {
-//    DI{
-//        bind<BookService>() with singleton { BookService() }
-//    }
-//}
-
 fun Application.configureKoinDI() {
     install(Koin){
         modules(appModule)
