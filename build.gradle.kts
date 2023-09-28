@@ -48,10 +48,17 @@ dependencies {
     implementation("io.insert-koin:koin-ktor:$koinVersion")
     //endregion
 
+    //region Validation & Exception
+    implementation("io.konform:konform-jvm:0.4.0")
+    implementation("io.ktor:ktor-server-status-pages:$ktorVersion")
+    implementation("io.ktor:ktor-server-request-validation:$ktorVersion")
+    //endregion
+
     //region Logger dependency
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
     implementation("io.ktor:ktor-server-call-logging:$ktorVersion")
-
+    implementation("io.ktor:ktor-server-host-common-jvm:2.3.4")
+    implementation("io.ktor:ktor-server-status-pages-jvm:2.3.4")
     //endregion
 
     //region Testing dependency

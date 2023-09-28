@@ -46,8 +46,8 @@ class BookRepository : IBookRepository {
      */
     override suspend fun create(bookEntity: Book): BookEntity = transaction {
         BookEntity.new {
-            title = bookEntity.title
-            author = bookEntity.author
+            title = bookEntity.title.toString()
+            author = bookEntity.author.toString()
         }
     }
 
